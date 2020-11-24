@@ -61,8 +61,8 @@ class Plotter:
         
         #plotting the midpoint of the runway using the start point and end point
         for index in range(0,len(x1)):
-            x[index] = (x1[index]+(x1[index]-x2[index]))
-            y[index] = (y1[index]+(y1[index]-y2[index]))
+            x[index] = (x1[index]+(x1[index]-x2[index])/2)
+            y[index] = (y1[index]+(y1[index]-y2[index])/2)
             if x[index] < -180 or x[index] > 180:
                 print(df['id'][index])
                 print(x1[index], x2[index], x1[index]+(x1[index]-x2[index]))
